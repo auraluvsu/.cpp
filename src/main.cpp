@@ -67,7 +67,12 @@ void startBankingSession() {
                 double money;
                 std::println("How much would you like to deposit?\n");
                 std::cin >> money;
-                deposit(account, money);
+                try {
+                    deposit(account, money);
+                } catch(std::logic_error e) {
+                    std::println("{}", e.what());
+                    std::exit(1);
+                }
                 std::println();
         }
     }
