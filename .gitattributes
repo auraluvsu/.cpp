@@ -1,0 +1,49 @@
+# --- Default behavior: normalize text files ---
+* text=auto
+
+# --- Force LF for source code (important for C/C++) ---
+*.c      text eol=lf
+*.cpp    text eol=lf
+*.cc     text eol=lf
+*.cxx    text eol=lf
+*.h      text eol=lf
+*.hpp    text eol=lf
+*.hh     text eol=lf
+*.hxx    text eol=lf
+
+# --- Build systems / configs ---
+CMakeLists.txt text eol=lf
+*.cmake        text eol=lf
+Makefile       text eol=lf
+*.mk           text eol=lf
+
+# --- Scripts ---
+*.sh   text eol=lf
+*.py   text eol=lf
+
+# --- Markdown / docs ---
+*.md   text eol=lf
+
+# --- Tell Git these are definitely text for proper diffs ---
+*.c    diff
+*.cpp  diff
+*.cc   diff
+*.cxx  diff
+*.h    diff
+*.hpp  diff
+*.hh   diff
+*.hxx  diff
+
+# --- Binaries (never try to diff these) ---
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.exe  binary
+*.out  binary
+*.o    binary
+*.a    binary
+*.so   binary
+*.dll  binary
+*.lib  binary
