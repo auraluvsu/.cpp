@@ -1,4 +1,4 @@
-#include <print>
+#include <cstdio>
 #include <string>
 
 // void qs(char *items, int left, int right) {
@@ -29,17 +29,17 @@
 //     qs(items, 0, len-1);
 // }
 
-namespace std {
-    void foo() {
-        int args[] = {1,2,3,4,5};
-        for (auto i : args) {
-            std::print("{}", i);
+class Animal {
+    public:
+        int age;
+        std::string name;
+        Animal(int x, std::string y): age(x), name(std::move(y)) {}
+        ~Animal() {
+            std::printf("Destructor called\n");
         }
-        std::print("\n");
-    }
-}
-
-int main() {
-    int foo[] = {1,2,3,4,5};
-    std::foo();
-}
+        void setId(const std::string& newId) {
+            id = newId;
+        }
+    private:
+        std::string id;
+};
