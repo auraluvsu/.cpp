@@ -30,21 +30,25 @@
 // }
 
 class Animal {
-    public:
-        int age;
-        std::string name;
-        Animal(int x, std::string y): age(x), name(std::move(y)) {
-            std::printf("constructor called");
-        }
-        ~Animal() {
-            std::printf("destructor called");
-        }
-        void setId(const std::string& newId) {
-            id = newId;
-        }
-        std::string getId() {
-            return this->id;
-        }
-    private:
-        std::string id;
+   public:
+      int age;
+      std::string name;
+      Animal(int x, std::string y): age(x), name(std::move(y)) {
+         std::printf("Constructor Called");
+      }
+
+      ~Animal() {
+         std::printf("Destructor Called");
+      }
+
+      void setId(const std::string& newId) {
+         id = newId;
+      }
+
+      std::string getId() {
+         return this->id;
+      }
+
+   private:
+      std::string id;
 };
